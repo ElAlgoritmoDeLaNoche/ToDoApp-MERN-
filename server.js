@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 
 // Importar conexión a db
+const db = require('./config/database')
 
 // Importación del archivo de rutas y modelo
 const routeTask = ''
