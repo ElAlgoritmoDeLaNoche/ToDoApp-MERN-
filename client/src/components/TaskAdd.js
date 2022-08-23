@@ -46,7 +46,7 @@ const TaskAdd = () => {
               </Grid.Container>
               <Grid.Container gap={2} justify='center'>
                 <Grid xs={12}>
-                  <Input
+                  <Textarea
                     css={{
                       marginLeft: '$12',
                     }}
