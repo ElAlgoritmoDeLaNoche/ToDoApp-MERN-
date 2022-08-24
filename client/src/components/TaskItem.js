@@ -17,7 +17,6 @@ const TaskItem = ({ task }) => {
             '&:hover': {
               transform: 'translateY(5px)'
             },
-            // mw: "330px"
           }}
         >
           <Card.Header>
@@ -36,7 +35,9 @@ const TaskItem = ({ task }) => {
           <Card.Footer>
             <Row justify='flex-end'>
               <Grid>
-                <Button size="sm" shadow color="primary" auto>View</Button>
+                <Link to={`/taskdetail/${task._id}`}>
+                  <Button size="sm" shadow color="primary" auto>View</Button>
+                </Link>
               </Grid>
               <Grid>
                 <Button size="sm" shadow color="warning" auto>Edit</Button>
