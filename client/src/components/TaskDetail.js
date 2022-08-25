@@ -21,7 +21,6 @@ const TaskDetail = () => {
       })
   }, [])
 
-
   return (
     <>
       <Container sm>

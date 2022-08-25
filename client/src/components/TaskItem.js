@@ -40,7 +40,9 @@ const TaskItem = ({ task }) => {
                 </Link>
               </Grid>
               <Grid>
-                <Button size="sm" shadow color="warning" auto>Edit</Button>
+                <Link to={`/taskedit/${task._id}`}>
+                  <Button size="sm" shadow color="warning" auto>Edit</Button>
+                </Link>
               </Grid>
               <Grid>
                 <Button size="sm" shadow color="error" auto>Delete</Button>
