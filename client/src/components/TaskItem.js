@@ -1,10 +1,20 @@
 import React from 'react'
 import { Card, Grid, Text, Button, Row } from '@nextui-org/react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const TaskItem = ({ task }) => {
 
   const navigate = useNavigate()
+
+  const taskdelete = (_id) => {
+    axios.post('/api/v1/taskdelete', { _id: _id })
+      .then((res) => {
+        console.log(res.data)
+        alert(res.data)
+        navigate(0)
+      })
+  }
 
   return (
     <>
@@ -45,7 +55,7 @@ const TaskItem = ({ task }) => {
                 </Link>
               </Grid>
               <Grid>
-                <Button size="sm" shadow color="error" auto>Delete</Button>
+                <Button size="sm" shadow color="error" auto onClick={() => { taskdelete(task._id) }}>Delete</Button>
               </Grid>
             </Row>
           </Card.Footer>
